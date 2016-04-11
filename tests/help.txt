@@ -1,0 +1,12 @@
+array()
+for()
+foreach()
+
+array_key_exists('cle', $array);
+in_array('valeur', $array);
+array_search('valeur', $array);
+
+isset();
+
+transtypage
+$_GET['valeur'] = (int) $_GET['valeur'];
