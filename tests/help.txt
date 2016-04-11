@@ -10,3 +10,16 @@ isset();
 
 transtypage
 $_GET['valeur'] = (int) $_GET['valeur'];
+
+$_POST
+
+htmlspecialchars();
+strip_tags();
+
+$_FILES['monfichier']['name']
+$_FILES['monfichier']['type']
+$_FILES['monfichier']['size']
+$_FILES['monfichier']['tmp_name']
+$_FILES['monfichier']['error']
+
+pathinfo();
