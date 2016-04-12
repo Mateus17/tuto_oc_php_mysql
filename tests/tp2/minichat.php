@@ -54,7 +54,9 @@ $req = $bdd->query('SELECT * FROM minichat ORDER BY id DESC LIMIT 0, 10');
       }
       ?>
     </table> 
-    
+<?php 
+$req->closeCursor();
+?>
     
   </body>
 
