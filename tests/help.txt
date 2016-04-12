@@ -47,3 +47,30 @@ fgets();
 fputs();
 fseek();
 fseek($monfichier, 0);
+
+mysqli_
+try{}catch{}
+
+query(); = requête
+fetch(); = va chercher
+closeCursor();
+
+SELECT
+FROM
+WHERE
+ORDER BY
+LIMIT
+
+prepare();
+execute();
+
+marqueurs nominatifs
+array associatif
+
+new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+INSERT INTO table() VALUES()
+exec();
+
+UPDATE
+DELETE FROM
