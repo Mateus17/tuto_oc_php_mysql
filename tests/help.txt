@@ -23,3 +23,27 @@ $_FILES['monfichier']['tmp_name']
 $_FILES['monfichier']['error']
 
 pathinfo();
+
+$_SERVER
+$_SERVER['REMOTE_ADDR'] -> pour avoir l'ip de l'user qui demande la page
+$_ENV
+$_SESSION
+$_COOKIE
+$_GET
+$_POST
+$_FILES
+
+session_start();
+session_destroy();
+
+setcookie();
+time();
+<?php setcookie('pseudo', 'M@teo21', time() + 365*24*3600, null, null, false, true); ?>
+
+fopen();
+fclose();
+fgetc();
+fgets();
+fputs();
+fseek();
+fseek($monfichier, 0);
