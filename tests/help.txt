@@ -95,3 +95,48 @@ COUNT(DISTINCT )
 
 GROUP BY
 HAVING
+
+DATE AAAA-MM-JJ
+TIME HH:MM:SS
+DATETIME AAAA-MM-JJ HH:MM:SS
+TIMESTAMP AAAAMMJJHHMMSS
+YEAR AAAA
+
+BETWEEN
+
+http://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html
+
+NOW()
+CURDATE()
+CURTIME()
+
+DAY()
+MONTH()
+YEAR()
+
+HOUR()
+MINUTE()
+SECOND()
+
+DATE_FORMAT ()
+http://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_date-format
+
+DATE_ADD()
+DATE_SUB()
+
+empty()
+
+jointure interne
+
+WHERE (ancienne syntaxe)
+table.champ
+
+JOIN
+INNER JOIN ... ON
+
+jointure externe
+
+LEFT JOIN
+RIGHT JOIN
+
+header ("Content-type: image/png");
