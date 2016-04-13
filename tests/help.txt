@@ -140,3 +140,29 @@ LEFT JOIN
 RIGHT JOIN
 
 header ("Content-type: image/png");
+imagecreate();
+
+imagecreatefromjpeg();
+imagecreatefrompng();
+
+imagejpeg();
+imagepng();
+
+imagecolorallocate($image, r, v, b);
+imagestring($image, $police, $x, $y, $texte_a_ecrire, $couleur);
+imagestringup(); idem à la verticale
+
+ImageSetPixel ($image, $x, $y, $couleur);
+ImageLine ($image, $x1, $y1, $x2, $y2, $couleur);
+ImageEllipse ($image, $x, $y, $largeur, $hauteur, $couleur);
+ImageRectangle ($image, $x1, $y1, $x2, $y2, $couleur);
+ImagePolygon ($image, $array_points, $nombre_de_points, $couleur);
+
+imagecolortransparent($image, $couleur);
+
+imagesx($source);
+imagesy($source);
+imagecopymerge($destination, $source, $destination_x, $destination_y, 0, 0, $largeur_source, $hauteur_source, 60);
+
+imagecreatetruecolor();
+imagecopyresampled($destination, $source, 0, 0, 0, 0, $largeur_destination, $hauteur_destination, $largeur_source, $hauteur_source);
