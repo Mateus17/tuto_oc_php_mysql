@@ -166,3 +166,38 @@ imagecopymerge($destination, $source, $destination_x, $destination_y, 0, 0, $lar
 
 imagecreatetruecolor();
 imagecopyresampled($destination, $source, 0, 0, 0, 0, $largeur_destination, $hauteur_destination, $largeur_source, $hauteur_source);
+
+PCRE
+preg_
+preg_grep();
+preg_split();
+preg_quote();
+preg_match();
+preg_match_all();
+preg_replace();
+preg_replace_callback();
+
+#
+
+^ (accent circonflexe) : indique le début d'une chaîne
+$ (dollar) : indique la fin d'une chaîne
+
+?
++
+*
+[]
+{}
+()
+
+Des classes de caractères
+Les intervalles de classe
+Les quantificateurs
+Les métacaractères (caractères spéciaux)
+# ! ^ $ ( ) [ ] { } ? + * . \ |
+Les classes abrégées
+
+#^0[1-68]([-. ]?[0-9]{2}){4}$# pour le numéro de téléphone FR
+#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$# pour le mail
+
+parser
+bbCode
