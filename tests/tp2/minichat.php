@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 try
 {
   // On se connecte à MySQL
@@ -10,7 +13,7 @@ catch(Exception $e)
   die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query('SELECT * FROM minichat ORDER BY id DESC LIMIT 0, 10');
+$req = $bdd->query('SELECT pseudo, message, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM minichat ORDER BY id DESC LIMIT 0, 10');
 
 ?>
 
@@ -19,14 +22,15 @@ $req = $bdd->query('SELECT * FROM minichat ORDER BY id DESC LIMIT 0, 10');
 
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Minichat</title>
   </head>
 
   <body>
+    
     <form action="minichat_post.php" method="post">
       <p>
         <label for="pseudo">Pseudo : </label>
-        <input type="text" name="pseudo" id="pseudo" />
+        <input type="text" name="pseudo" id="pseudo" value="<?php echo $_SESSION['pseudo']; ?>" />
       </p>
       <p>
         <label for="message">Message : </label>
@@ -36,10 +40,12 @@ $req = $bdd->query('SELECT * FROM minichat ORDER BY id DESC LIMIT 0, 10');
         <input type="submit" value="Submit" />
       </p>
     </form>
+  
     <h2>Messages</h2>
     
     <table style="width:25%">
       <tr>
+        <th>Date / Heure</th>
         <th>Firstname</th>
         <th>Message</th>
       </tr>
@@ -47,7 +53,8 @@ $req = $bdd->query('SELECT * FROM minichat ORDER BY id DESC LIMIT 0, 10');
       while ($donnees = $req->fetch()) {
       ?>
       <tr>
-        <td><?php echo htmlspecialchars($donnees['pseudo']); ?></td>
+        <td><?php echo $donnees['date_creation_fr']; ?></td>
+        <td style="color: blue"><?php echo htmlspecialchars($donnees['pseudo']); ?></td>
         <td><?php echo htmlspecialchars($donnees['message']); ?></td>
       </tr>
       <?php

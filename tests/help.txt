@@ -214,3 +214,21 @@ encapsulation
 public
 private
 protected
+
+design patterns
+
+MVC
+
+bindParam();
+singleton ?
+
+contrôleur global
+
+hachage
+site RPX
+
+Référence fonctions PHP doc : http://php.net/manual/fr/funcref.php
+
+Parse error
+Undefined function
+Wrong parameter count

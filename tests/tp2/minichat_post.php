@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+$_SESSION['pseudo'] = $_POST['pseudo'];
+
 try
 {
   // On se connecte à MySQL
@@ -10,7 +14,9 @@ catch(Exception $e)
   die('Erreur : '.$e->getMessage());
 }
 
-// On ajoute une entrée dans la table jeux_video
+if (!isset($_POST['pseudo']) || $_POST['message'])
+{
+    // On ajoute une entrée dans la table minichat
 $req = $bdd->prepare('INSERT INTO minichat(pseudo, message) VALUES(:pseudo, :message)');
 $req->execute(array(
   'pseudo' => $_POST['pseudo'],
@@ -18,3 +24,11 @@ $req->execute(array(
 ));
 
 header('Location: minichat.php');
+} else {
+
+  ?>
+  
+  <p>Le pseudo et message ne doit pas être vide ! <a href="minichat.php">Page précédente</a></p>
+
+  <?php  
+}
