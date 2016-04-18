@@ -201,3 +201,16 @@ Les classes abrégées
 
 parser
 bbCode
+
+méthodes magiques
+__construct
+__destruct
+__get
+
+héritage
+extends
+
+encapsulation
+public
+private
+protected
